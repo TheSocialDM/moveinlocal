@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /chandler/
 
 Sitemap: https://moveinlocal.com/sitemap.xml
