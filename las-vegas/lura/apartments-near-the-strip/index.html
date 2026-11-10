@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#141820">
 <title>Lura Las Vegas Apartments Near the Strip, 2 Months Free | MoveInLocal</title>
-<meta name="description" content="Lura on W Harmon Ave in Las Vegas: walk to the Strip over the Harmon Bridge. 2 months free rent on homes with move in by Nov 25, 2 bedrooms from $2,100 a month with the offer. Live prices and FAQs.">
+<meta name="description" content="Lura on W Harmon Ave in Las Vegas: walk to the Strip over the Harmon Bridge. 2 months free rent on homes with move in by Nov 25, 2 bedrooms from $2,100 a month with the offer. Prices checked Nov 10, 2026, with renter FAQs.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://moveinlocal.com/las-vegas/lura/apartments-near-the-strip/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MoveInLocal">
 <meta property="og:title" content="Lura Las Vegas: walk to the Strip, 2 months free">
-<meta property="og:description" content="Live prices, the 2 months free math and straight answers for Lura on W Harmon Ave.">
+<meta property="og:description" content="The 2 months free math and straight answers for Lura on W Harmon Ave. Prices checked Nov 10, 2026.">
 <meta property="og:url" content="https://moveinlocal.com/las-vegas/lura/apartments-near-the-strip/">
 <meta property="og:image" content="https://moveinlocal.com/img/lura/lura-las-vegas-strip-view.jpg">
 <meta property="og:image:alt" content="Lura apartment with floor to ceiling windows and Strip views">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lura Las Vegas: walk to the Strip, 2 months free">
-<meta name="twitter:description" content="Live prices, the 2 months free math and straight answers for Lura on W Harmon Ave.">
+<meta name="twitter:description" content="The 2 months free math and straight answers for Lura on W Harmon Ave. Prices checked Nov 10, 2026.">
 <meta name="twitter:image" content="https://moveinlocal.com/img/lura/lura-las-vegas-strip-view.jpg">
 <meta name="format-detection" content="telephone=no,address=no,email=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -319,7 +319,7 @@ footer a{color:var(--gold2)}
   <div class="faq-side">
    <div class="sec-head" style="margin-bottom:22px">
     <div class="eyebrow" style="color:var(--gold)">Questions renters ask</div>
-    <h2>Straight answers from the live listing.</h2>
+    <h2>Straight answers, checked Nov 10, 2026.</h2>
    </div>
    <div class="box">
     <b>Still have a question?</b>
@@ -347,7 +347,7 @@ footer a{color:var(--gold2)}
 
 <footer>
  <div class="wrap">
-  <div><img class="flogo" src="/img/lura/lura-logo.png" alt="Lura"><br>3240 W Harmon Ave, Las Vegas, NV 89103<br>702 935 6015<br><br>Prices, specials and availability checked against Lura's website on Nov 10, 2026. Pricing and availability are subject to change. Additional fees may apply. Equal Housing Opportunity.</div>
+  <div><img class="flogo" src="/img/lura/lura-logo.png" alt="Lura"><br>3240 W Harmon Ave, Las Vegas, NV 89103<br>702 935 6015<br><br>Prices, specials and availability checked against the Lura website on Nov 10, 2026. Pricing and availability are subject to change. Additional fees may apply. Equal Housing Opportunity.</div>
   <div><b>Office hours</b><br>Mon to Fri, 9 AM to 6 PM<br>Sat and Sun, 10 AM to 5 PM</div>
   <div><b>Official site</b><br><a href="https://www.luravegas.com/">luravegas.com</a><br><br>Leasing guide for Lura, maintained by LocalLift, a marketing partner of the community.</div>
  </div>
@@ -362,6 +362,7 @@ footer a{color:var(--gold2)}
 <script>
 const PLANS = [{"id": "B1", "label": "2 bed \u00b7 2 bath", "sq": "1,041", "base": 2520, "total": 2720, "avail_short": "Available now", "offer": true, "special": true, "img": "/img/lura/lura-b1-2-bedroom-floor-plan.jpg", "roomies": true}, {"id": "Penthouse", "label": "1 bed \u00b7 1 bath", "sq": "997", "base": 3195, "total": 3395, "avail_short": "Only 2 left \u00b7 available now", "offer": true, "special": true, "img": "/img/lura/lura-penthouse-1-bedroom-floor-plan.jpg", "roomies": null}, {"id": "A7", "label": "1 bed \u00b7 1 bath", "sq": "727", "base": 1950, "total": 2150, "avail_short": "Available Nov 13", "offer": true, "special": true, "img": "/img/lura/lura-a7-1-bedroom-floor-plan.jpg", "roomies": null}, {"id": "A3", "label": "1 bed \u00b7 1 bath", "sq": "685", "base": 1770, "total": 1970, "avail_short": "Only 1 left \u00b7 from Jan 15", "offer": false, "special": true, "img": "/img/lura/lura-a3-1-bedroom-floor-plan.jpg", "roomies": null}, {"id": "A1", "label": "1 bed \u00b7 1 bath", "sq": "693", "base": 1870, "total": 2070, "avail_short": "Only 2 left \u00b7 from Jan 8", "offer": false, "special": true, "img": "/img/lura/lura-a1-1-bedroom-floor-plan.jpg", "roomies": null}];
 const FREE = 2;
+const LEASE = 12;
 const $ = s => document.querySelector(s);
 const money = n => "$" + Math.round(n).toLocaleString("en-US");
 let cur = PLANS[0], n = 1, off = FREE ? 1 : 0;
@@ -379,9 +380,9 @@ function render(){
  const k = can2 ? n : 1;
  const useOff = FREE && off && cur.offer;
  const ob = document.querySelector(".offer"); if(ob) ob.style.display = cur.offer ? "flex" : "none";
- const eff = useOff ? cur.base*(12-FREE)/12 : cur.base;
+ const eff = useOff ? cur.base*(LEASE-FREE)/LEASE : cur.base;
  $("#r-plan").textContent = cur.id + " · " + cur.label + " · " + cur.sq + " sq ft";
- $("#r-label").textContent = (k==2 ? "Each roommate" : "Your rent") + (useOff ? ", base rent averaged over 12 months with the offer" : ", base rent");
+ $("#r-label").textContent = (k==2 ? "Each roommate" : "Your rent") + (useOff ? ", base rent averaged over " + LEASE + " months with the offer" : ", base rent");
  $("#r-big").textContent = money(eff/k);
  $("#r-base").textContent = money(cur.base);
  $("#r-total").textContent = cur.total ? "from " + money(cur.total) : "ask the leasing team";

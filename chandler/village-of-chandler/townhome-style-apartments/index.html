@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#141820">
 <title>Village of Chandler Townhome Style Apartments with Private Yards | MoveInLocal</title>
-<meta name="description" content="Village of Chandler at 6075 S Gilbert Rd: townhome style apartments with private yard living near Ocotillo. 2 bed, 2 bath from $2,249. Ask about 4 to 9 weeks free. Live prices and FAQs.">
+<meta name="description" content="Village of Chandler at 6075 S Gilbert Rd: townhome style apartments with private yard living near Ocotillo. 2 bed, 2 bath from $2,249. Ask about 4 to 9 weeks free. Prices checked Nov 10, 2026, with renter FAQs.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://moveinlocal.com/chandler/village-of-chandler/townhome-style-apartments/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MoveInLocal">
 <meta property="og:title" content="Village of Chandler: townhome style living with a private yard">
-<meta property="og:description" content="Live prices, roommate math and straight answers for Village of Chandler, near Ocotillo.">
+<meta property="og:description" content="Roommate math and straight answers for Village of Chandler, near Ocotillo. Prices checked Nov 10, 2026.">
 <meta property="og:url" content="https://moveinlocal.com/chandler/village-of-chandler/townhome-style-apartments/">
 <meta property="og:image" content="https://moveinlocal.com/img/village-of-chandler/village-of-chandler-townhome.jpg">
 <meta property="og:image:alt" content="Townhome style home at Village of Chandler">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Village of Chandler: townhome style living with a private yard">
-<meta name="twitter:description" content="Live prices, roommate math and straight answers for Village of Chandler, near Ocotillo.">
+<meta name="twitter:description" content="Roommate math and straight answers for Village of Chandler, near Ocotillo. Prices checked Nov 10, 2026.">
 <meta name="twitter:image" content="https://moveinlocal.com/img/village-of-chandler/village-of-chandler-townhome.jpg">
 <meta name="format-detection" content="telephone=no,address=no,email=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -319,7 +319,7 @@ footer a{color:var(--gold2)}
   <div class="faq-side">
    <div class="sec-head" style="margin-bottom:22px">
     <div class="eyebrow" style="color:var(--gold)">Questions renters ask</div>
-    <h2>Straight answers from the live listing.</h2>
+    <h2>Straight answers, checked Nov 10, 2026.</h2>
    </div>
    <div class="box">
     <b>Still have a question?</b>
@@ -347,7 +347,7 @@ footer a{color:var(--gold2)}
 
 <footer>
  <div class="wrap">
-  <div><img class="flogo" src="/img/village-of-chandler/village-of-chandler-logo.png" alt="Pillar Communities"><br>6075 S Gilbert Rd, Chandler, AZ 85249<br>480 366 4682<br><br>Prices, specials and availability checked against Village of Chandler's website on Nov 10, 2026. Pricing and availability are subject to change. Additional fees may apply. Equal Housing Opportunity.</div>
+  <div><img class="flogo" src="/img/village-of-chandler/village-of-chandler-logo.png" alt="Pillar Communities"><br>6075 S Gilbert Rd, Chandler, AZ 85249<br>480 366 4682<br><br>Prices, specials and availability checked against the Village of Chandler website on Nov 10, 2026. Pricing and availability are subject to change. Additional fees may apply. Equal Housing Opportunity.</div>
   <div><b>Office hours</b><br>Mon to Fri, 9 AM to 6 PM<br>Closed 12:30 to 1:30 PM for lunch<br>Closed Thanksgiving Day, Nov 26</div>
   <div><b>Official site</b><br><a href="https://www.villageofchandler.com/">villageofchandler.com</a><br><br>Leasing guide for Village of Chandler, maintained by LocalLift, a marketing partner of the community.</div>
  </div>
@@ -362,6 +362,7 @@ footer a{color:var(--gold2)}
 <script>
 const PLANS = [{"id": "SanTan", "label": "2 bed \u00b7 2 bath", "sq": "996", "base": 2249, "total": 2410.5, "avail_short": "5 available", "offer": false, "special": true, "img": "/img/village-of-chandler/village-of-chandler-santan-2-bedroom-floor-plan.jpg", "roomies": true}, {"id": "Ocotillo", "label": "3 bed \u00b7 3 bath", "sq": "1,350", "base": 2539, "total": 2700.5, "avail_short": "Inquire for details", "offer": false, "special": true, "img": "/img/village-of-chandler/village-of-chandler-ocotillo-3-bedroom-floor-plan.jpg", "roomies": false}, {"id": "Marcos", "label": "1 bed \u00b7 1 bath", "sq": "679", "base": 1839, "total": 2000.5, "avail_short": "Inquire for details", "offer": false, "special": true, "img": "/img/village-of-chandler/village-of-chandler-marcos-1-bedroom-floor-plan.jpg", "roomies": false}];
 const FREE = 0;
+const LEASE = 12;
 const $ = s => document.querySelector(s);
 const money = n => "$" + Math.round(n).toLocaleString("en-US");
 let cur = PLANS[0], n = 2, off = FREE ? 1 : 0;
@@ -379,9 +380,9 @@ function render(){
  const k = can2 ? n : 1;
  const useOff = FREE && off && cur.offer;
  const ob = document.querySelector(".offer"); if(ob) ob.style.display = cur.offer ? "flex" : "none";
- const eff = useOff ? cur.base*(12-FREE)/12 : cur.base;
+ const eff = useOff ? cur.base*(LEASE-FREE)/LEASE : cur.base;
  $("#r-plan").textContent = cur.id + " · " + cur.label + " · " + cur.sq + " sq ft";
- $("#r-label").textContent = (k==2 ? "Each roommate" : "Your rent") + (useOff ? ", base rent averaged over 12 months with the offer" : ", base rent");
+ $("#r-label").textContent = (k==2 ? "Each roommate" : "Your rent") + (useOff ? ", base rent averaged over " + LEASE + " months with the offer" : ", base rent");
  $("#r-big").textContent = money(eff/k);
  $("#r-base").textContent = money(cur.base);
  $("#r-total").textContent = cur.total ? "from " + money(cur.total) : "ask the leasing team";
