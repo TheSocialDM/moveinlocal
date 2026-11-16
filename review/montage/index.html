@@ -14,7 +14,9 @@ function go(){if(!done){done=true;location.replace(G)}}
 var bot=/bot|facebookexternalhit|Twitterbot|Slack|WhatsApp|preview/i.test(navigator.userAgent);
 if(bot){done=true}
 gtag('js',new Date());gtag('config','G-FC39M4P67G',{send_page_view:false});
-if(!bot){gtag('event','review_link_open',{property:'montage',source:new URLSearchParams(location.search).get('src')||'text',event_callback:go});setTimeout(go,800);}
+var q=new URLSearchParams(location.search),cl=function(v){return String(v||'').replace(/[^A-Za-z -]/g,'').slice(0,20)};
+if(!bot){gtag('event','review_link_open',{property:'montage',source:cl(q.get('src'))||'text',staff:cl(q.get('by')),moment:cl(q.get('m')),event_callback:go});setTimeout(go,800);}
 </script>
 <style>body{margin:0;font:17px/1.5 system-ui,sans-serif;background:#f6f1e8;color:#1c1712;display:grid;place-items:center;min-height:100vh;text-align:center;padding:24px}a{color:#8f531b;font-weight:700}</style>
-</head><body><p>Opening Google reviews for Montage<br><a href="https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0">Tap here if it does not open</a></p></body></html>
+<noscript><meta http-equiv="refresh" content="0;url=https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0"></noscript>
+</head><body><p>Opening Google reviews for Montage.<br><a href="https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0">Tap here if it does not open</a></p></body></html>
