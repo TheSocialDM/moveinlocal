@@ -10,13 +10,14 @@
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 var G='https://search.google.com/local/writereview?placeid=ChIJMzzN35zFyIARsGOoHvQgI58',done=false;
-function go(){if(!done){done=true;location.replace(G)}}
+function go(){if(!done){done=true;rg('auto');setTimeout(function(){location.replace(G)},250)}}
 var bot=/bot|facebookexternalhit|Twitterbot|Slack|WhatsApp|preview/i.test(navigator.userAgent);
 if(bot){done=true}
 gtag('js',new Date());gtag('config','G-FC39M4P67G',{send_page_view:false});
 var q=new URLSearchParams(location.search),cl=function(v){return String(v||'').replace(/[^A-Za-z -]/g,'').slice(0,20)};
+function rg(m){try{gtag('event','review_google_open',{property:'lura',staff:cl(q.get('by')),src:cl(q.get('src'))||'text',moment:cl(q.get('m')),method:m,transport_type:'beacon'})}catch(e){}}/*llrg*/
 if(!bot){gtag('event','review_link_open',{property:'lura',source:cl(q.get('src'))||'text',staff:cl(q.get('by')),moment:cl(q.get('m')),});setTimeout(go,4500);}
 </script>
 <style>body{margin:0;font:17px/1.5 -apple-system,system-ui,sans-serif;background:#edf3f7;color:#0d2233;display:grid;place-items:center;min-height:100vh;text-align:center;padding:24px;box-sizing:border-box}.c{max-width:420px}.t{font-size:22px;font-weight:800;margin:0 0 10px}.tip{background:#fff;border:1px solid #cfdbe3;border-radius:18px;padding:16px 18px;margin:0 0 18px;font-size:17px}.b{display:block;background:#00608a;color:#fff;text-decoration:none;border-radius:99px;padding:15px 20px;font-weight:800;font-size:17px}.s{font-size:14px;color:#5f6b74;margin-top:12px}</style>
 <noscript><meta http-equiv="refresh" content="0;url=https://search.google.com/local/writereview?placeid=ChIJMzzN35zFyIARsGOoHvQgI58"></noscript>
-</head><body><div class="c"><p class="t">Thanks for taking a moment!</p><p class="tip">Not sure what to say? A sentence or two in your own words is perfect. Anything about your home or your experience, good or not so good, helps your future neighbors.</p><a class="b" href="https://search.google.com/local/writereview?placeid=ChIJMzzN35zFyIARsGOoHvQgI58" onclick="done=true">Open Google reviews</a><p class="s">Google opens on its own in a few seconds.</p></div></body></html>
+</head><body><div class="c"><p class="t">Thanks for taking a moment!</p><p class="tip">Not sure what to say? A sentence or two in your own words is perfect. Anything about your home or your experience, good or not so good, helps your future neighbors.</p><a class="b" href="https://search.google.com/local/writereview?placeid=ChIJMzzN35zFyIARsGOoHvQgI58" onclick="if(!done&&!bot)rg('tap');done=true">Open Google reviews</a><p class="s">Google opens on its own in a few seconds.</p></div></body></html>
